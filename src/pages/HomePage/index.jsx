@@ -1,5 +1,5 @@
-import React from "react";
 import Navbar from "../../components/Navbar/index";
+import { MainContentContainer } from "./style";
 
 function HomePage() {
     return (
@@ -7,7 +7,9 @@ function HomePage() {
             <header>
                 <Navbar></Navbar>
             </header>
-            <main>Main Content</main>
+            <main>
+                <MainContentContainer>MainContent</MainContentContainer>
+            </main>
             <footer>Footer</footer>
         </>
     );
