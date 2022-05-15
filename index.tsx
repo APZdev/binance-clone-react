@@ -17,7 +17,7 @@ const NavbarCategories = () => {
 const navbarCategories = [
     {
         categoryGraphics: <MenuGridIcon />,
-        payWithBanner: false,
+        payWithBanner: true,
         labelText: "",
         child: [
             {
@@ -25,26 +25,11 @@ const navbarCategories = [
                 name: "Exchange",
                 description: "Blockchain and crypto asset exchange",
             },
-            {
-                iconGraphics: <MenuGridIcon />,
-                name: "Bank Deposit",
-                description: "Deposit EUR via SEPA or card",
-            },
-            {
-                iconGraphics: <MenuGridIcon />,
-                name: "Bank Deposit",
-                description: "Deposit EUR via SEPA or card",
-            },
-            {
-                iconGraphics: <MenuGridIcon />,
-                name: "Bank Deposit",
-                description: "Deposit EUR via SEPA or card",
-            },
         ],
     },
     {
         categoryGraphics: <p>Buy Crypto</p>,
-        payWithBanner: true,
+        payWithBanner: false,
         labelText: "EUR",
         child: [
             {

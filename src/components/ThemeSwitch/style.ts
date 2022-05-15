@@ -2,15 +2,10 @@ import styled from "styled-components";
 import SunIcon from "@mui/icons-material/LightMode";
 import MoonIcon from "@mui/icons-material/DarkMode";
 
-export const NavbarContainer = styled.div`
-    width: 100vw;
-    min-height: 64px;
-    background-color: ${(props) => props.theme.bg.default};
-`;
-
-export const SwitchButton = styled.button`
-    width: 100px;
-    height: 100px;
+export const ThemeSwitchContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const LightModeIcon = styled(SunIcon)`

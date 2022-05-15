@@ -3,6 +3,10 @@ export const darkTheme = {
         default: "#0B0E11",
         secondary: "#181A20",
     },
+    navbar: {
+        default: "#1e2329",
+        hover: "#2b3139",
+    },
     brand: {
         default: "#F0B90B",
         alt: "#FCD535",
@@ -10,6 +14,7 @@ export const darkTheme = {
     text: {
         default: "#EAECEF",
         secondary: "#EAECEF",
+        hover: "#F0B90B",
         alt: "#848E9C",
         success: "#03A66D",
         error: "#CF304A",
@@ -26,6 +31,10 @@ export const lightTheme = {
         default: "#FAFAFA",
         secondary: "#FFFFFF",
     },
+    navbar: {
+        default: "#1e2329",
+        hover: "#2b3139",
+    },
     brand: {
         default: "#F0B90B",
         alt: "#FCD535",
@@ -33,6 +42,7 @@ export const lightTheme = {
     text: {
         default: "#1E2329",
         secondary: "#1E2329",
+        hover: "#F0B90B",
         alt: "#848E9C",
         success: "#03A66D",
         error: "#CF304A",

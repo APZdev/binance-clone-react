@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
+
+@import url('http://fonts.cdnfonts.com/css/gotham');
   * {
     border: 0;
     box-sizing: inherit;
@@ -14,23 +16,24 @@ export default createGlobalStyle`
     -webkit-appearance: none;
     -moz-appearance: none;
 
-    transition: color 0.2s, background-color 0.2s;
+    transition: background-color 0.2s;
   }
   html {
     display: flex;
     min-height: 100%;
+    height: 100%;
     width: 100%;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 500;
     line-height: 1.5;
     background-color: ${(props: any) => props.theme.bg.default};
-    color: #16171a;
+    color: ${(props: any) => props.theme.text.default};
     padding: 0;
     margin: 0;
     -webkit-font-smoothing: auto;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,props
-      sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-family: 'Gotham', sans-serif;
   }
   body {
     box-sizing: border-box;
