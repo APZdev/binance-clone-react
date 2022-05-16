@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { clearCache, hexToCSSFilter } from "hex-to-css-filter";
-
-import { ReactComponent as MenuGridIconSVG } from "../../assets/Images/SVG/menu-grid-icon.svg";
+import { useMemo } from "react";
 
 export const NavbarContainer = styled.div`
     display: flex;
@@ -12,35 +11,8 @@ export const NavbarContainer = styled.div`
     min-height: 64px;
     background-color: ${(props) => props.theme.bg.secondary};
 
-    & a {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-
-        margin: 0 8px;
-
-        height: 64px;
-    }
-
     .empty_space {
         flex: 1;
-    }
-
-    .navbar_right_section {
-        display: flex;
-        justify-content: center;
-    }
-
-    .navbar_right_section > * {
-        height: 100%;
-    }
-
-    & .navbar_right_section p {
-        color: ${(props) => props.theme.text.default};
-    }
-
-    & .navbar_right_section p:hover {
-        color: ${(props) => props.theme.text.hover};
     }
 
     & .download_button_container > p {
@@ -68,10 +40,38 @@ export const NavbarContainer = styled.div`
     }
 `;
 
+export const BinanceNavLogoLink = styled.a`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin: 0 8px;
+
+    height: 64px;
+`;
+
+export const NavbarRightSection = styled.div`
+    display: flex;
+    justify-content: center;
+
+    & > * {
+        height: 100%;
+    }
+
+    & p {
+        color: ${(props) => props.theme.text.default};
+    }
+
+    & p:hover {
+        color: ${(props) => props.theme.text.hover};
+    }
+`;
+
 export const BinanceNavLogo = styled.img`
     width: 120px;
     filter: ${(props) => {
-        const finalColor = hexToCSSFilter(props.theme.brand.default).filter;
+        const filterValue = useMemo(() => hexToCSSFilter(props.theme.brand.default).filter, [props.theme.brand.default]);
+        const finalColor = filterValue;
         clearCache();
         return finalColor;
     }};
@@ -89,19 +89,45 @@ export const NavbarCategoriesContainer = styled.div`
     }
 `;
 
-export const MenuGridIcon = styled(MenuGridIconSVG)`
-    margin-bottom: 4px;
-    filter: ${(props) => {
-        const finalColor = hexToCSSFilter(props.theme.text.default).filter;
-        clearCache();
-        return finalColor;
-    }};
+export const AuthenticationButtonsContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+
+    & .empty_spacer {
+        min-width: 12px;
+        min-height: 12px;
+    }
+`;
+
+export const LogInButton = styled.a`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+
+    color: ${(props) => props.theme.text.default};
 
     &:hover {
-        filter: ${(props) => {
-            const finalColor = hexToCSSFilter(props.theme.text.hover).filter;
-            clearCache();
-            return finalColor;
-        }};
+        color: ${(props) => props.theme.text.hover};
+    }
+`;
+
+export const RegisterButton = styled.a`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    font-size: 14px;
+    min-height: 32px;
+    border-radius: 4px;
+    font-weight: 500;
+    color: ${(props) => props.theme.button.text};
+
+    background-color: ${(props) => props.theme.button.default};
+
+    &:hover {
+        background-color: ${(props) => props.theme.button.hover};
     }
 `;

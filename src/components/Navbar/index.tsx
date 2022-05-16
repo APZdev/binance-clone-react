@@ -1,80 +1,46 @@
-import { NavbarContainer, BinanceNavLogo, NavbarCategoriesContainer, MenuGridIcon } from "./style";
+import {
+    NavbarContainer,
+    BinanceNavLogo,
+    NavbarCategoriesContainer,
+    NavbarRightSection,
+    AuthenticationButtonsContainer,
+    LogInButton,
+    RegisterButton,
+    BinanceNavLogoLink,
+} from "./style";
 import ThemeSwitch from "../ThemeSwitch";
 import BinanceLogo from "../../assets/Images/SVG/home-binance-logo.svg";
 
 import NavbarCategory from "./NavbarCategory";
+import { navbarData } from "../../constants/navbarData";
 
 const NavbarCategories = () => {
     return (
         <>
-            {navbarCategories.map((item, index) => (
+            {navbarData.map((item, index) => (
                 <NavbarCategory key={index} props={item} />
             ))}
         </>
     );
 };
 
-const navbarCategories = [
-    {
-        categoryGraphics: <MenuGridIcon />,
-        payWithBanner: false,
-        labelText: "",
-        child: [
-            {
-                iconGraphics: <MenuGridIcon />,
-                name: "Exchange",
-                description: "Blockchain and crypto asset exchange",
-            },
-            {
-                iconGraphics: <MenuGridIcon />,
-                name: "Bank Deposit",
-                description: "Deposit EUR via SEPA or card",
-            },
-            {
-                iconGraphics: <MenuGridIcon />,
-                name: "Bank Deposit",
-                description: "Deposit EUR via SEPA or card",
-            },
-            {
-                iconGraphics: <MenuGridIcon />,
-                name: "Bank Deposit",
-                description: "Deposit EUR via SEPA or card",
-            },
-        ],
-    },
-    {
-        categoryGraphics: <p>Buy Crypto</p>,
-        payWithBanner: true,
-        labelText: "EUR",
-        child: [
-            {
-                iconGraphics: <MenuGridIcon />,
-                name: "Bank Deposit",
-                description: "Deposit EUR via SEPA or card",
-            },
-        ],
-    },
-    {
-        categoryGraphics: <p>Markets</p>,
-        payWithBanner: false,
-        labelText: "",
-        child: [],
-    },
-];
-export type NavbarCateogryType = typeof navbarCategories;
-
 export default function Navbar() {
     return (
         <>
             <NavbarContainer>
-                <a href="localhost:3000">
+                <BinanceNavLogoLink href="localhost:3000">
                     <BinanceNavLogo src={BinanceLogo} alt="binance-icon" />
-                </a>
+                </BinanceNavLogoLink>
                 <NavbarCategoriesContainer>
                     <NavbarCategories />
                 </NavbarCategoriesContainer>
                 <div className="empty_space"></div>
-                <div className="navbar_right_section">
+                <AuthenticationButtonsContainer>
+                    <LogInButton href="https://www.binance.com/en">Log In</LogInButton>
+                    <div className="empty_spacer" />
+                    <RegisterButton href="https://www.binance.com/en">Register</RegisterButton>
+                </AuthenticationButtonsContainer>
+                <NavbarRightSection className="navbar_right_section">
                     <div className="download_button_container">
                         <p>Downloads</p>
                     </div>
@@ -85,7 +51,7 @@ export default function Navbar() {
                         <div className="navbar_spacer" />
                         <ThemeSwitch />
                     </div>
-                </div>
+                </NavbarRightSection>
             </NavbarContainer>
         </>
     );

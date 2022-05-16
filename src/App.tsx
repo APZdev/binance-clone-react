@@ -6,6 +6,7 @@ import { lightTheme, darkTheme } from "./shared/theme/index";
 import ResetCSS from "./shared/theme/reset.css";
 
 import { HomePage } from "./pages/index";
+import { ReactComponent as BinanceIconBank } from "./assets/Images/SVG/binance-svg-bank.svg";
 
 function App() {
     const theme = useSelector((state: RootState) => state.theme.value);
@@ -13,6 +14,7 @@ function App() {
     return (
         <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
             <ResetCSS />
+            <BinanceIconBank />
             <>
                 <HomePage />
             </>

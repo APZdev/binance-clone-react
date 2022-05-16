@@ -22,7 +22,9 @@ export const darkTheme = {
         placeholder: "#7C8894",
     },
     button: {
-        default: "#FBD849",
+        default: "#fcd535",
+        hover: "#F0B90B",
+        text: "#181a20",
     },
 };
 
@@ -32,8 +34,8 @@ export const lightTheme = {
         secondary: "#FFFFFF",
     },
     navbar: {
-        default: "#1e2329",
-        hover: "#2b3139",
+        default: "#FFFFFF",
+        hover: "#F5F5F5",
     },
     brand: {
         default: "#F0B90B",
@@ -50,7 +52,9 @@ export const lightTheme = {
         placeholder: "#7C8894",
     },
     button: {
-        default: "#FBD849",
+        default: "#fcd535",
+        hover: "#FCD94A",
+        text: "#181a20",
     },
 };
 

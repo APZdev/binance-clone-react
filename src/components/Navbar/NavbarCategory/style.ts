@@ -6,15 +6,7 @@ export const NavbarSubCategoriesContainer = styled.div`
 
     box-sizing: border-box;
     margin: 0;
-    min-width: 0;
-    background-color: #ffffff;
-    position: relative;
-    box-shadow: 0px 0px 20px rgb(0 0 0 / 8%);
     overflow: hidden;
-    min-width: 200px;
-    max-width: 400px;
-    border-radius: 0 0 8px 8px;
-    padding: 0 16px 16px 16px;
 
     position: absolute;
     background-color: ${(props) => props.theme.navbar.default};
@@ -34,6 +26,15 @@ export const NavbarCategoryContainer = styled.div`
     &:hover ${NavbarSubCategoriesContainer} {
         display: block;
     }
+
+    &:hover .category_arrow {
+        transform: rotate3d(1, 0, 0, 180deg);
+    }
+
+    &:hover .category_icon,
+    &:hover .category_title {
+        color: ${(props) => props.theme.text.hover};
+    }
 `;
 
 export const NavbarCategorySelectorContainer = styled.div`
@@ -52,12 +53,12 @@ export const NavbarCategorySelectorContainer = styled.div`
     & > p {
         white-space: nowrap;
     }
+`;
 
-    &:hover .category_arrow {
-        transform: rotate3d(1, 0, 0, 180deg);
-    }
+export const SubCategoriesCardContainer = styled.div<{ subCategoriesColumnSize: number }>`
+    display: grid;
+    grid-template-rows: repeat(${(p) => p.subCategoriesColumnSize}, min-content);
+    grid-auto-flow: column;
 
-    &:hover > p {
-        color: ${(props) => props.theme.text.hover};
-    }
+    padding: 0 16px 16px 16px;
 `;

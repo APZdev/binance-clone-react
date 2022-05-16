@@ -7,13 +7,14 @@ export const LabelContainer = styled.div`
     justify-content: center;
     align-items: center;
 
-    font-size: 11px;
-    font-weight: 200;
-    font-family: "Gotham XLight", sans-serif;
+    font-size: 10.5px;
+    font-weight: 700;
+    font-family: "Gotham Light", sans-serif;
 
     margin-left: 8px;
     padding: 0 4px;
     border-radius: 4px;
+    line-height: 16px;
 
     background-color: #fcd535;
     color: #1e2329;

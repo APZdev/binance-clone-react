@@ -2,7 +2,6 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
 
-@import url('http://fonts.cdnfonts.com/css/gotham');
   * {
     border: 0;
     box-sizing: inherit;
@@ -19,6 +18,7 @@ export default createGlobalStyle`
     transition: background-color 0.2s;
   }
   html {
+    /*overflow-y: overlay; */
     display: flex;
     min-height: 100%;
     height: 100%;
@@ -26,14 +26,15 @@ export default createGlobalStyle`
     box-sizing: border-box;
     font-size: 14px;
     font-weight: 500;
-    line-height: 1.5;
+    letter-spacing: -0.2px;
+    line-height: 1.15;
     background-color: ${(props: any) => props.theme.bg.default};
     color: ${(props: any) => props.theme.text.default};
     padding: 0;
     margin: 0;
     -webkit-font-smoothing: auto;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    font-family: 'Gotham', sans-serif;
+    font-family: sans-serif;
   }
   body {
     box-sizing: border-box;
@@ -42,6 +43,19 @@ export default createGlobalStyle`
     overscroll-behavior-y: none;
     -webkit-overflow-scrolling: touch;
   }
+
+  body::-webkit-scrollbar {
+    width: 16px;
+  }
+ 
+  body::-webkit-scrollbar-thumb {
+    background-color: #00000033;
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: #00000055;
+  }
+
   #root {
     height: 100%;
     width: 100%;
@@ -83,5 +97,4 @@ export default createGlobalStyle`
     /* Internet Explorer 10-11 */
     color: ${(props) => props.theme.text.placeholder};
   }
-
 `;

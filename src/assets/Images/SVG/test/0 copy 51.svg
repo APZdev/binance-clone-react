@@ -1,0 +1,10 @@
+<svg viewBox="0 0 24 24">
+  <path d="M22 6H2V4h20v2Z" fill="#76808F"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M22.055 20H14.48V8h7.574v12Zm-20-12h10.464v12H2.055V8Zm5.258 2v8l-3.907-3.906L7.312 10Zm9.484 8v-8l3.906 3.906L16.797 18Z" fill="url(#G)"/>
+  <defs>
+    <linearGradient id="G" x1="12.055" y1="8" x2="12.055" y2="20" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0B90B"/>
+      <stop offset="1" stop-color="#F8D33A"/>
+    </linearGradient>
+  </defs>
+</svg>

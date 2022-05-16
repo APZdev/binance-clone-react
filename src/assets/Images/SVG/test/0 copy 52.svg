@@ -1,0 +1,10 @@
+<svg viewBox="0 0 24 24">
+  <path d="M2 6h20V4H2v2z" fill="#76808F"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M2 8h9v12H2V8zm3 6 4-4v8l-4-4z" fill="url(#a)"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M13 8h9v12h-9V8zm6 6-4-4v8l4-4z" fill="#76808F"/>
+</svg>
+<svg viewBox="0 0 24 24">
+  <path d="M22 6H2V4h20v2z" fill="#76808F"/>
+  <path d="M2 20h11V8H2v12z" fill="url(#a)"/>
+  <path d="M15 20h7V8h-7v12z" fill="#76808F"/>
+</svg>
