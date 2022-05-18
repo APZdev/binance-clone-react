@@ -27,3 +27,15 @@ export const DarkModeIcon = styled(MoonIcon)`
         cursor: pointer;
     }
 `;
+
+export const ThemeIconContainer = styled.div`
+    display: flex;
+    align-item: center;
+    justify-content: center;
+
+    color: ${(props) => props.theme.text.default};
+
+    &:hover {
+        color: ${(props) => props.theme.text.hover};
+    }
+`;
