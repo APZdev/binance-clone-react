@@ -2,7 +2,7 @@ import Navbar from "../../components/Navbar/index";
 import { Helmet } from "react-helmet-async";
 import { MainContentContainer } from "./style";
 
-function HomePage() {
+export const HomePage: React.FC = () => {
     return (
         <>
             <Helmet>
@@ -24,6 +24,4 @@ function HomePage() {
             <footer>Footer</footer>
         </>
     );
-}
-
-export default HomePage;
+};

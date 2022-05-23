@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
-import { SvgIcon } from "../../helpers/SVG/svgImport";
-import { changeTheme } from "../../slices/theme";
-import { RootState } from "../../store/store";
+import { SvgIcon } from "../../../../../helpers/SVG/svgImport";
+import { changeTheme } from "../../../../../slices/theme";
+import { RootState } from "../../../../../store/store";
 
 import { ThemeIconContainer, ThemeSwitchContainer } from "./style";
 

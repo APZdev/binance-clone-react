@@ -5,6 +5,10 @@ export const BannerContainer = styled.div`
     z-index: 5;
     width: 100%;
     height: 66px;
+
+    @media (max-width: 768px) {
+        height: 60px;
+    }
 `;
 export const BannerPageSpaceCreator = styled.div`
     pointer-events: none;
@@ -12,6 +16,10 @@ export const BannerPageSpaceCreator = styled.div`
     height: 66px;
 
     background-color: #fff;
+
+    @media (max-width: 768px) {
+        height: 60px;
+    }
 `;
 
 export const BannerContentContainer = styled.div`
@@ -40,7 +48,7 @@ export const DownloadButtonContainer = styled.div`
     align-items: center;
     justify-content: center;
 
-    background-color: ${(props) => props.theme.brand.default};
+    background-color: ${(p) => p.theme.brand.default};
 
     width: 36px;
     height: 36px;
@@ -57,11 +65,21 @@ export const AppInfoTextContainer = styled.div`
         font-size: 16px;
         font-weight: 600;
         line-height: 1.3;
+        color: #fff;
+
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
     }
 
     & .description {
         font-size: 14px;
         line-height: 1.3;
+        color: #fff;
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
     }
 `;
 

@@ -33,21 +33,34 @@ interface NavbarState {
 }
 
 export const NavbarContentContainer = styled.div<NavbarState>`
+    overflow-y: scroll;
     position: absolute;
     z-index: 2;
     pointer-events: all;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 
-    background-color: red;
-    width: 365px;
+    width: 392px;
     height: 100vh;
+    padding-bottom: 32px;
 
-    background-color: ${(props) => props.theme.mobileNavbar.default};
+    background-color: ${(p) => p.theme.mobileNavbar.default};
 
     transition: transform 0.5s;
 
-    transform: translateX(${(props) => (props.isMobile ? "0px" : "375px")});
+    transform: translateX(${(props) => (props.isMobile ? "0px" : "392px")});
+`;
+
+export const CloseButtonContainer = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px;
+
+    color: #848e9c;
+`;
+
+export const AuthenticationSectionContainer = styled.div`
+    padding: 16px;
 `;

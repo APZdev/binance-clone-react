@@ -9,7 +9,11 @@ export const DesktopNavbarContainer = styled.div`
 
     width: 100%;
     min-height: 64px;
-    background-color: ${(props) => props.theme.bg.secondary};
+    background-color: ${(p) => p.theme.bg.secondary};
+
+    @media (max-width: 768px) {
+        padding: 0 8px;
+    }
 
     .empty_space {
         flex: 1;
@@ -64,5 +68,5 @@ export const BinanceLogoContainer = styled.div`
     display: flex;
     align-items: center;
 
-    color: ${(props) => props.theme.brand.default};
+    color: ${(p) => p.theme.brand.default};
 `;

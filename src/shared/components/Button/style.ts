@@ -17,8 +17,8 @@ export const CustomButton = styled.button<ButtonProps>`
     font-weight: 500;
     white-space: nowrap;
 
-    width: ${(props) => (props.width === undefined ? "auto" : props.width)};
-    height: ${(props) => (props.height === undefined ? "auto" : props.height)};
+    width: ${(props) => (props.width === undefined ? "100%" : props.width)};
+    height: ${(props) => (props.height === undefined ? "100%" : props.height)};
     color: ${(props) => (props.defaultTextColor === undefined ? props.theme.text.default : props.defaultTextColor)};
     background-color: ${(props) => (props.defaultBgColor === undefined ? props.theme.bg.default : props.defaultBgColor)};
     padding: ${(props) => (props.padding === undefined ? "6px 12px" : props.padding)};

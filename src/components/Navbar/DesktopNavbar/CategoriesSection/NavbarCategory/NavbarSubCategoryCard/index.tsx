@@ -1,6 +1,6 @@
 import React from "react";
-import { NavbarLabel } from "../NavbarLabel";
 import { CardContainer, CardDescription, CardName, RightArrowIcon } from "./style";
+import { Label } from "../../../../../../shared/components/Label";
 
 interface Props {
     subCategoriesData: {
@@ -20,7 +20,7 @@ export const NavbarSubCategoryCard: React.FC<Props> = ({ subCategoriesData }) =>
             <div className="card_info_container">
                 <div className="name_new_label_container">
                     <CardName>{name}</CardName>
-                    {newLabel && <NavbarLabel text="new" />}
+                    {newLabel && <Label text="new" />}
                 </div>
                 <CardDescription>{description}</CardDescription>
             </div>

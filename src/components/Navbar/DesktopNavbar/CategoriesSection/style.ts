@@ -1,11 +1,7 @@
 import styled from "styled-components";
 
-interface Props {
-    enabled: boolean;
-}
-
-export const NavbarCategoriesContainer = styled.div<Props>`
-    display: ${(props) => (props.enabled ? "flex" : "none")};
+export const NavbarCategoriesContainer = styled.div`
+    display: flex;
     align-items: center;
     float: left;
 

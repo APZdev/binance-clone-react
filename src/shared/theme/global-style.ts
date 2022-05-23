@@ -29,14 +29,17 @@ export const GlobalStyle = createGlobalStyle<ThemeType>`
     font-weight: 500;
     font-family: 'IBM Plex Sans', monospace,sans-serif;
   }
-
+  
   html {
-    /*overflow-y: overlay; */
-    background-color: ${(props) => props.theme.bg.default};
-    color: ${(props) => props.theme.text.default};
-    
+    background-color: ${(p) => p.theme.bg.default};
+    color: ${(p) => p.theme.text.default};
   }
-
+  
+  body {
+    overflow-y: scroll;
+  }
+  
+/* 
   body::-webkit-scrollbar {
     width: 17px;
   }
@@ -47,33 +50,26 @@ export const GlobalStyle = createGlobalStyle<ThemeType>`
 
   body::-webkit-scrollbar-thumb:hover {
     background-color: #00000055;
-  }
+  } 
+*/
 
   ::-moz-selection {
     /* Code for Firefox */
-    background: ${(props) => props.theme.brand.alt};
-    color: ${(props) => props.theme.text.reverse};
   }
   ::selection {
-    background: ${(props) => props.theme.brand.alt};
-    color: ${(props) => props.theme.text.reverse};
   }
   ::-webkit-input-placeholder {
     /* WebKit, Blink, Edge */
-    color: ${(props) => props.theme.text.placeholder};
   }
   :-moz-placeholder {
     /* Mozilla Firefox 4 to 18 */
-    color: ${(props) => props.theme.text.placeholder};
     opacity: 1;
   }
   ::-moz-placeholder {
     /* Mozilla Firefox 19+ */
-    color: ${(props) => props.theme.text.placeholder};
     opacity: 1;
   }
   :-ms-input-placeholder {
     /* Internet Explorer 10-11 */
-    color: ${(props) => props.theme.text.placeholder};
   }
 `;

@@ -2,7 +2,7 @@ import { hexToCSSFilter, clearCache } from "hex-to-css-filter";
 import { useMemo } from "react";
 import styled from "styled-components";
 
-import { ReactComponent as RightArrow } from "../../../../../assets/Images/SVG/right-arrow-long.svg";
+import { ReactComponent as RightArrow } from "../../../../../../assets/Images/SVG/right-arrow-long.svg";
 
 export const RightArrowIcon = styled(RightArrow)`
     position: absolute;
@@ -55,7 +55,7 @@ export const CardContainer = styled.div`
     }
 
     &:hover {
-        background-color: ${(props) => props.theme.desktopNavbar.hover};
+        background-color: ${(p) => p.theme.desktopNavbar.hover};
     }
 
     &:hover ${RightArrowIcon} {
@@ -70,11 +70,11 @@ export const CardContainer = styled.div`
 export const CardName = styled.p`
     white-space: nowrap;
     font-size: 16px;
-    color: ${(props) => props.theme.text.default};
+    color: ${(p) => p.theme.text.default};
 `;
 
 export const CardDescription = styled.p`
-    color: ${(props) => props.theme.text.alt};
+    color: ${(p) => p.theme.text.alt};
     font-size: 12px;
     margin-top: 4px;
     width: 100%;

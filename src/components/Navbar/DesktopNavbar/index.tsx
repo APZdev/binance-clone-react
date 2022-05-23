@@ -6,6 +6,7 @@ import { MobileNavbarSwitch } from "./MobileNavbarSwitch";
 import { AuthenticationSection } from "./AuthenticationSection";
 import { CategoriesSection } from "./CategoriesSection";
 import { SvgIcon } from "../../../helpers/SVG/svgImport";
+import React from "react";
 
 export const DesktopNavbar: React.FC = () => {
     const downloadLanguageCurrencyThemeSectionCollapsed: boolean = useMediaQuery("(min-width:1246px)");
@@ -19,7 +20,7 @@ export const DesktopNavbar: React.FC = () => {
                     <SvgIcon id="binance-logo" width={120}></SvgIcon>
                 </BinanceLogoContainer>
             </BinanceNavLogoLink>
-            <CategoriesSection enabled={categoriesSectionCollapsed} />
+            {categoriesSectionCollapsed && <CategoriesSection />}
             <div className="empty_space"></div>
             {authenticationSectionCollapsed && <AuthenticationSection />}
             {downloadLanguageCurrencyThemeSectionCollapsed && <DownloadLanguageCurrencyThemeSection />}

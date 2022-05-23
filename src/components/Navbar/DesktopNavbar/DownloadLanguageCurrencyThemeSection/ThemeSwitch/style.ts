@@ -10,20 +10,20 @@ export const ThemeSwitchContainer = styled.div`
 
 export const LightModeIcon = styled(SunIcon)`
     width: 16px !important;
-    color: ${(props) => props.theme.text.default};
+    color: ${(p) => p.theme.text.default};
 
     &:hover {
-        color: ${(props) => props.theme.brand.default};
+        color: ${(p) => p.theme.brand.default};
         cursor: pointer;
     }
 `;
 
 export const DarkModeIcon = styled(MoonIcon)`
     width: 16px !important;
-    color: ${(props) => props.theme.text.default};
+    color: ${(p) => p.theme.text.default};
 
     &:hover {
-        color: ${(props) => props.theme.brand.default};
+        color: ${(p) => p.theme.brand.default};
         cursor: pointer;
     }
 `;
@@ -33,9 +33,9 @@ export const ThemeIconContainer = styled.div`
     align-item: center;
     justify-content: center;
 
-    color: ${(props) => props.theme.text.default};
+    color: ${(p) => p.theme.text.default};
 
     &:hover {
-        color: ${(props) => props.theme.text.hover};
+        color: ${(p) => p.theme.text.hover};
     }
 `;

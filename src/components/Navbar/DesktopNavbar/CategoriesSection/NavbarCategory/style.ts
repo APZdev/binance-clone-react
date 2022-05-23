@@ -9,7 +9,7 @@ export const NavbarSubCategoriesContainer = styled.div`
     overflow: hidden;
 
     position: absolute;
-    background-color: ${(props) => props.theme.desktopNavbar.default};
+    background-color: ${(p) => p.theme.desktopNavbar.default};
     box-shadow: 0px 0px 20px rgb(0 0 0 / 8%);
     border-radius: 0 0 8px 8px;
 
@@ -33,7 +33,7 @@ export const NavbarCategoryContainer = styled.div`
 
     &:hover .category_icon,
     &:hover .category_title {
-        color: ${(props) => props.theme.text.hover};
+        color: ${(p) => p.theme.text.hover};
     }
 `;
 

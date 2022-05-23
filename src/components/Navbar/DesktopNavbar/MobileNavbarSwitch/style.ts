@@ -7,6 +7,6 @@ export const SwitchContainer = styled.div`
     margin: 0 8px;
 
     &:hover {
-        color: ${(props) => props.theme.text.hover};
+        color: ${(p) => p.theme.text.hover};
     }
 `;

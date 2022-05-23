@@ -1,5 +1,5 @@
 import React from "react";
-import { ThemeSwitch } from "../../../ThemeSwitch";
+import { ThemeSwitch } from "./ThemeSwitch";
 import { DownloadLanguageCurrencyThemeContainer } from "./style";
 
 export const DownloadLanguageCurrencyThemeSection: React.FC = () => {

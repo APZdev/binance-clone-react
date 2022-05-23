@@ -11,6 +11,7 @@ const theme = {
             },
             mobileNavbar: {
                 default: "#1e2329",
+                hover: "#2b3139",
             },
             brand: {
                 default: "#F0B90B",
@@ -29,11 +30,17 @@ const theme = {
                 hover: "#F0B90B",
                 text: "#181a20",
             },
+            border: {
+                default: "#272a2e",
+            },
             warn: {
                 default: "#CF304A",
             },
             success: {
                 default: "#03A66D",
+            },
+            themeSwitch: {
+                default: "#474d57",
             },
         },
     },
@@ -49,6 +56,7 @@ const theme = {
             },
             mobileNavbar: {
                 default: "#FFFFFF",
+                hover: "#F5F5F5",
             },
             brand: {
                 default: "#F0B90B",
@@ -67,11 +75,17 @@ const theme = {
                 hover: "#FCD94A",
                 text: "#181a20",
             },
+            border: {
+                default: "#eaecef",
+            },
             warn: {
                 default: "#CF304A",
             },
             success: {
                 default: "#03A66D",
+            },
+            themeSwitch: {
+                default: "#eaecef",
             },
         },
     },

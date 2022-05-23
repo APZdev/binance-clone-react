@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const LabelContainer = styled.div`
+interface Props {
+    height?: string;
+}
+
+export const LabelContainer = styled.div<Props>`
     position: relative;
 
     display: flex;
@@ -10,6 +14,7 @@ export const LabelContainer = styled.div`
     font-size: 12px;
     font-weight: 400;
 
+    height: ${(p) => p.height !== undefined && p.height};
     margin-left: 8px;
     padding: 0 4px;
     border-radius: 4px;

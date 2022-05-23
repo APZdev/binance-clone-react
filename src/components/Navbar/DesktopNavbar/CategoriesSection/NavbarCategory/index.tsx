@@ -2,10 +2,10 @@ import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import { NavbarSubCategoryCard } from "./NavbarSubCategoryCard";
-import { NavbarLabel } from "./NavbarLabel";
 import CurrencySelector from "./CurrencySelector";
 
 import { NavbarCategoryContainer, NavbarCategorySelectorContainer, NavbarSubCategoriesContainer, SubCategoriesCardContainer } from "./style";
+import { Label } from "../../../../../shared/components/Label";
 
 interface Props {
     item: {
@@ -29,7 +29,7 @@ export const NavbarCategory: React.FC<Props> = ({ item }) => {
         <NavbarCategoryContainer>
             <NavbarCategorySelectorContainer>
                 {categoryGraphics}
-                {labelText !== "" && <NavbarLabel text={labelText} />}
+                {labelText !== "" && <Label text={labelText} />}
                 {subCategories.length > 0 ? <FontAwesomeIcon className="category_arrow" icon={faCaretDown} /> : ""}
             </NavbarCategorySelectorContainer>
             {subCategories.length > 0 ? (

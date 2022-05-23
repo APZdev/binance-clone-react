@@ -30,11 +30,22 @@ export const CurrencyValueContainer = styled.div`
     padding: 12px;
 
     &:hover {
-        background-color: ${(props) => props.theme.desktopNavbar.hover};
+        background-color: ${(p) => p.theme.desktopNavbar.hover};
     }
 `;
 
 export const CurrencyIcon = styled.img`
     width: 20px;
     height: auto;
+`;
+
+export const ArrowIconContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: ${(p) => p.theme.text.alt};
+    width: 18px;
+    height: 18px;
+
+    transform: rotateZ(-90deg);
 `;

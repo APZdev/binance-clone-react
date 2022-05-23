@@ -6,16 +6,16 @@ import { AuthenticationSectionContainer } from "./style";
 export const AuthenticationSection: React.FC = () => {
     return (
         <AuthenticationSectionContainer>
-            <Button value="Log In" defaultBgColor="#00000000" hoverBgColor="#00000000" />
+            <Button value="Log In" height="40px" defaultBgColor="#00000000" hoverBgColor="#00000000" padding="10px 16px" />
             <Spacer width={12} height={12} />
             <Button
                 value="Register"
-                height="32px"
+                height="40px"
                 defaultTextColor="#181a20"
                 hoverTextColor="#181a20"
                 defaultBgColor="#FCD535"
                 hoverBgColor="#FCD535DD"
-                padding="6px 12px"
+                padding="10px 16px"
             />
         </AuthenticationSectionContainer>
     );
