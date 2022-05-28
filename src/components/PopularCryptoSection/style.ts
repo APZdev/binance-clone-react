@@ -7,9 +7,12 @@ export const SectionContainer = styled.div`
     padding: 80 0;
     border-radius: 24px 24px 0px 0px;
     background-color: ${(p) => p.theme.bg.secondary};
-
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4em;
+
+    & > p {
+        font-size: 4em;
+        text-align: center;
+    }
 `;
