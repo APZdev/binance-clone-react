@@ -14,34 +14,10 @@ export const DesktopNavbarContainer = styled.div`
     @media (max-width: 768px) {
         padding: 0 8px;
     }
+`;
 
-    .empty_space {
-        flex: 1;
-    }
-
-    & .download_button_container > p {
-        margin: 0 8px;
-    }
-
-    & .download_button_container {
-        display: flex;
-        align-items: center;
-    }
-
-    & .navbar_user_section_container {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0 8px;
-    }
-
-    & .navbar_spacer {
-        background-color: #5e6673;
-        width: 1px;
-        height: 13px;
-        margin: 0 8px;
-    }
+export const EmptySpace = styled.div`
+    flex: 1;
 `;
 
 export const BinanceNavLogo = styled.img`

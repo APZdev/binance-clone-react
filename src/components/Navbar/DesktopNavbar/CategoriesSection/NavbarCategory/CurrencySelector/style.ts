@@ -16,10 +16,14 @@ export const CurrencySelectorContainer = styled.div`
     & > div {
         display: flex;
     }
+`;
 
-    & .currency_value {
-        margin: 0 8px;
-    }
+export const CurrencyValue = styled.p`
+    margin: 0 8px;
+`;
+
+export const PayWithText = styled.p`
+    margin-left: 8px;
 `;
 
 export const CurrencyValueContainer = styled.div`
@@ -31,6 +35,7 @@ export const CurrencyValueContainer = styled.div`
 
     &:hover {
         background-color: ${(p) => p.theme.desktopNavbar.hover};
+        cursor: pointer;
     }
 `;
 

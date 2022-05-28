@@ -30,8 +30,19 @@ const theme = {
                 hover: "#F0B90B",
                 text: "#181a20",
             },
+            input: {
+                border: {
+                    default: "#5E6673",
+                    hover: "#F0B90B",
+                },
+                background: "#181A20",
+                placeholder: "#5E6673",
+                text: "#EAECEF",
+            },
             border: {
                 default: "#272a2e",
+                alt: "#5E6673",
+                hover: "#F0B90B",
             },
             warn: {
                 default: "#CF304A",
@@ -75,8 +86,19 @@ const theme = {
                 hover: "#FCD94A",
                 text: "#181a20",
             },
+            input: {
+                border: {
+                    default: "#B7BDC6",
+                    hover: "#F0B90B",
+                },
+                background: "#FFFFFF",
+                placeholder: "#B7BDC6",
+                text: "#1E2329",
+            },
             border: {
                 default: "#eaecef",
+                alt: "#b7bdc6",
+                hover: "#F0B90B",
             },
             warn: {
                 default: "#CF304A",

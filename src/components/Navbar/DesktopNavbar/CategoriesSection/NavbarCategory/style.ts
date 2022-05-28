@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { CategoryIcon, CategoryTitle } from "../../../../../constants/navbarData";
 
 export const NavbarSubCategoriesContainer = styled.div`
     top: 64px;
@@ -12,12 +13,12 @@ export const NavbarSubCategoriesContainer = styled.div`
     background-color: ${(p) => p.theme.desktopNavbar.default};
     box-shadow: 0px 0px 20px rgb(0 0 0 / 8%);
     border-radius: 0 0 8px 8px;
+`;
 
-    & .empty_spacer {
-        width: 100%;
-        height: 0;
-        padding-bottom: 16px;
-    }
+export const EmptySpacer = styled.div`
+    width: 100%;
+    height: 0;
+    padding-bottom: 16px;
 `;
 
 export const NavbarCategoryContainer = styled.div`
@@ -31,8 +32,7 @@ export const NavbarCategoryContainer = styled.div`
         transform: rotate3d(1, 0, 0, 180deg);
     }
 
-    &:hover .category_icon,
-    &:hover .category_title {
+    &:hover ${CategoryIcon}, &:hover ${CategoryTitle} {
         color: ${(p) => p.theme.text.hover};
     }
 `;
@@ -40,7 +40,12 @@ export const NavbarCategoryContainer = styled.div`
 export const NavbarCategorySelectorContainer = styled.div`
     display: flex;
     align-items: center;
+    height: 100%;
     margin: 0 8px;
+
+    &:hover {
+        cursor: pointer;
+    }
 
     & .category_arrow {
         margin: 0 3px 2px 3px;

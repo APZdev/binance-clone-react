@@ -3,7 +3,7 @@ import { ArrowIconContainer, CurrencyIcon, CurrencySelectorContainer, CurrencyVa
 import EuroIcon from "../../../../../../assets/Images/PNG/euro-icon.png";
 import { SvgIcon } from "../../../../../../helpers/SVG/svgImport";
 
-export default function CurrencySelector() {
+export const CurrencySelector: React.FC = () => {
     return (
         <CurrencySelectorContainer>
             <p>Pay with</p>
@@ -16,4 +16,4 @@ export default function CurrencySelector() {
             </CurrencyValueContainer>
         </CurrencySelectorContainer>
     );
-}
+};

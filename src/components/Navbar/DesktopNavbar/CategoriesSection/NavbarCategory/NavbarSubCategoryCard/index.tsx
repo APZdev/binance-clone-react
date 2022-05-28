@@ -1,5 +1,5 @@
 import React from "react";
-import { CardContainer, CardDescription, CardName, RightArrowIcon } from "./style";
+import { CardContainer, CardDescription, CardInfoContainer, CardName, ImageContainer, NameNewLabelContainer, RightArrowIcon } from "./style";
 import { Label } from "../../../../../../shared/components/Label";
 
 interface Props {
@@ -16,14 +16,14 @@ export const NavbarSubCategoryCard: React.FC<Props> = ({ subCategoriesData }) =>
 
     return (
         <CardContainer>
-            <div className="image_container">{iconGraphics}</div>
-            <div className="card_info_container">
-                <div className="name_new_label_container">
+            <ImageContainer>{iconGraphics}</ImageContainer>
+            <CardInfoContainer>
+                <NameNewLabelContainer>
                     <CardName>{name}</CardName>
                     {newLabel && <Label text="new" />}
-                </div>
+                </NameNewLabelContainer>
                 <CardDescription>{description}</CardDescription>
-            </div>
+            </CardInfoContainer>
             <RightArrowIcon />
         </CardContainer>
     );

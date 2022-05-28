@@ -10,7 +10,7 @@ export const ThemeSwitch: React.FC = () => {
 
     return (
         <ThemeSwitchContainer>
-            <ThemeIconContainer isDark={theme !== "dark"} className="theme_switch">
+            <ThemeIconContainer isDark={theme !== "dark"}>
                 {theme === "dark" ? <SvgIcon id="mode-dark" width={14} height={14} /> : <SvgIcon id="mode-light" width={14} height={14} />}
             </ThemeIconContainer>
         </ThemeSwitchContainer>

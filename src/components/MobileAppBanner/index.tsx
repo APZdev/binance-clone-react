@@ -4,7 +4,9 @@ import {
     AppInfoTextContainer,
     BannerContainer,
     BannerContentContainer,
+    BannerDescription,
     BannerPageSpaceCreator,
+    BannerTitle,
     BinanceLogo,
     CloseButtonContainer,
     DownloadButtonContainer,
@@ -16,7 +18,7 @@ import { SvgIcon } from "../../helpers/SVG/svgImport";
 
 export const MobileAppBanner: React.FC = () => {
     const [displayBanner, setDisplayBanner] = useState<boolean>(true);
-    const displayMobileAppBanner: boolean = !useMediaQuery("(min-width:1024px)") && displayBanner;
+    const displayMobileAppBanner = !useMediaQuery("(min-width:1024px)") && displayBanner;
 
     return (
         <>
@@ -27,8 +29,8 @@ export const MobileAppBanner: React.FC = () => {
                             <BannerContentContainer>
                                 <BinanceLogo src={BinanceAppLogo} alt="binance-logo" />
                                 <AppInfoTextContainer>
-                                    <p className="title">BINANCE APP</p>
-                                    <p className="description">Secure, fast and elegant.</p>
+                                    <BannerTitle>BINANCE APP</BannerTitle>
+                                    <BannerDescription>Secure, fast and elegant.</BannerDescription>
                                 </AppInfoTextContainer>
                                 <DownloadButtonContainer>
                                     <SvgIcon id="download-icon" width={20} height={20} />

@@ -60,26 +60,26 @@ export const AppInfoTextContainer = styled.div`
     display: flex;
     flex-direction: column;
     flex: 1;
+`;
 
-    & .title {
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 1.3;
-        color: #fff;
+export const BannerTitle = styled.p`
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #fff;
 
-        @media (max-width: 768px) {
-            font-size: 14px;
-        }
-    }
-
-    & .description {
+    @media (max-width: 768px) {
         font-size: 14px;
-        line-height: 1.3;
-        color: #fff;
+    }
+`;
 
-        @media (max-width: 768px) {
-            font-size: 12px;
-        }
+export const BannerDescription = styled.p`
+    font-size: 14px;
+    line-height: 1.3;
+    color: #fff;
+
+    @media (max-width: 768px) {
+        font-size: 12px;
     }
 `;
 

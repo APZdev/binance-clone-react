@@ -1,5 +1,5 @@
 import { NavbarSubCategoryCard } from "./NavbarSubCategoryCard";
-import CurrencySelector from "./CurrencySelector";
+import { CurrencySelector } from "./CurrencySelector";
 
 import { NavbarCategoryContainer, NavbarCategorySelectorContainer, NavbarSubCategoriesContainer, SubCategoriesCardContainer } from "./style";
 import { NavbarItem } from "../../NavbarItem";

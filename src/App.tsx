@@ -10,7 +10,7 @@ import { HomePage } from "./pages/index";
 import { ReactComponent as BinanceIconBank } from "./assets/Images/SVG/binance-svg-bank.svg";
 import { MobileAppBanner } from "./components/MobileAppBanner";
 
-function App() {
+export const App: React.FC = () => {
     const theme = useSelector((state: RootState) => state.theme.value);
 
     return (
@@ -24,6 +24,4 @@ function App() {
             </>
         </ThemeProvider>
     );
-}
-
-export default App;
+};

@@ -26,7 +26,7 @@ export const GlobalStyle = createGlobalStyle<ThemeType>`
     pointer-events: inherit;
     transition: background-color 0.2s;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     font-family: 'IBM Plex Sans', monospace,sans-serif;
   }
   
@@ -38,7 +38,11 @@ export const GlobalStyle = createGlobalStyle<ThemeType>`
   body {
     overflow-y: scroll;
   }
-  
+
+  button:hover {
+    cursor: pointer;
+  }
+
 /* 
   body::-webkit-scrollbar {
     width: 17px;

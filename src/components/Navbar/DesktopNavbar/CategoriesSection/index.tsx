@@ -6,8 +6,15 @@ import { NavbarCategoriesContainer } from "./style";
 const NavbarCategories = () => {
     return (
         <>
-            {desktopNavbarData.map((item, index) => (
-                <NavbarCategory key={index} item={item} />
+            {desktopNavbarData.map(({ categoryGraphics, payWithBanner, subCategoriesColumnSize, labelText, subCategories }, index) => (
+                <NavbarCategory
+                    key={index}
+                    categoryGraphics={categoryGraphics}
+                    payWithBanner={payWithBanner}
+                    labelText={labelText}
+                    subCategoriesColumnSize={subCategoriesColumnSize}
+                    subCategories={subCategories}
+                />
             ))}
         </>
     );

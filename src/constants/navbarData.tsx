@@ -2,20 +2,15 @@ import styled from "styled-components";
 
 import { SvgIcon } from "../helpers/SVG/svgImport";
 
-const MenuGridIcon = styled.div`
-    color: ${(p) => p.theme.text.default};
-
-    &:hover {
-        color: ${(p) => p.theme.text.hover};
-    }
-`;
+export const CategoryTitle = styled.p``;
+export const CategoryIcon = styled.div``;
 
 export const desktopNavbarData = [
     {
         categoryGraphics: (
-            <MenuGridIcon className="category_icon">
+            <CategoryIcon>
                 <SvgIcon id="icon-h-top-menu-s" width={24} height={24} />
-            </MenuGridIcon>
+            </CategoryIcon>
         ),
         payWithBanner: false,
         labelText: "",
@@ -114,7 +109,7 @@ export const desktopNavbarData = [
         ],
     },
     {
-        categoryGraphics: <p className="category_title">Buy Crypto</p>,
+        categoryGraphics: <CategoryTitle>Buy Crypto</CategoryTitle>,
         payWithBanner: true,
         labelText: "EUR",
         subCategoriesColumnSize: 5,
@@ -132,34 +127,34 @@ export const desktopNavbarData = [
                 description: "Buy crypto via card",
             },
             {
-                iconGraphics: <SvgIcon id="p2p" width={26} height={26} />,
-                newLabel: false,
-                name: "P2P Trading",
-                description: "Bank transfer and 100+ options",
-            },
-            {
                 iconGraphics: <SvgIcon id="wallet" width={26} height={26} />,
                 newLabel: false,
                 name: "Cash Balance",
                 description: "Buy Crypto with your EUR balance",
             },
             {
-                iconGraphics: <SvgIcon id="payment" width={26} height={26} />,
+                iconGraphics: <SvgIcon id="bank" width={26} height={26} />,
                 newLabel: false,
-                name: "Third-party Payment",
-                description: "Simplex, Banxa (SEPA)",
+                name: "Bank Transfer",
+                description: "Buy BUSD via SEPA",
+            },
+            {
+                iconGraphics: <SvgIcon id="p2p" width={26} height={26} />,
+                newLabel: false,
+                name: "P2P Trading",
+                description: "Bank transfer and 100+ options",
             },
         ],
     },
     {
-        categoryGraphics: <p className="category_title">Markets</p>,
+        categoryGraphics: <CategoryTitle>Markets</CategoryTitle>,
         payWithBanner: false,
         labelText: "",
         subCategoriesColumnSize: 1,
         subCategories: [],
     },
     {
-        categoryGraphics: <p className="category_title">Trade</p>,
+        categoryGraphics: <CategoryTitle>Trade</CategoryTitle>,
         payWithBanner: false,
         labelText: "",
         subCategoriesColumnSize: 7,
@@ -209,7 +204,7 @@ export const desktopNavbarData = [
         ],
     },
     {
-        categoryGraphics: <p className="category_title">Derivatives</p>,
+        categoryGraphics: <CategoryTitle>Derivatives</CategoryTitle>,
         payWithBanner: false,
         labelText: "",
         subCategoriesColumnSize: 8,
@@ -265,7 +260,7 @@ export const desktopNavbarData = [
         ],
     },
     {
-        categoryGraphics: <p className="category_title">Earn</p>,
+        categoryGraphics: <CategoryTitle>Earn</CategoryTitle>,
         payWithBanner: false,
         labelText: "",
         subCategoriesColumnSize: 5,
@@ -327,7 +322,7 @@ export const desktopNavbarData = [
         ],
     },
     {
-        categoryGraphics: <p className="category_title">Finance</p>,
+        categoryGraphics: <CategoryTitle>Finance</CategoryTitle>,
         payWithBanner: false,
         labelText: "",
         subCategoriesColumnSize: 3,
@@ -353,7 +348,7 @@ export const desktopNavbarData = [
         ],
     },
     {
-        categoryGraphics: <p className="category_title">NFT</p>,
+        categoryGraphics: <CategoryTitle>NFT</CategoryTitle>,
         payWithBanner: false,
         labelText: "New",
         subCategoriesColumnSize: 3,

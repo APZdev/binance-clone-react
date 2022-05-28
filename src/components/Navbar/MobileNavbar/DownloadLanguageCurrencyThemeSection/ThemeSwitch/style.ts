@@ -38,7 +38,7 @@ export const DarkModeIcon = styled(MoonIcon)`
 
 export const ThemeIconContainer = styled.div<ThemeStateProps>`
     position: absolute;
-    top: 13%;
+    top: 12%;
     left: 20%;
 
     transform: translateX(${({ isDark }) => (isDark ? "-45%" : "45%")});

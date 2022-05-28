@@ -1,49 +1,62 @@
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { NavbarSubCategoryCard } from "./NavbarSubCategoryCard";
-import CurrencySelector from "./CurrencySelector";
+import {
+    EmptySpacer,
+    NavbarCategoryContainer,
+    NavbarCategorySelectorContainer,
+    NavbarSubCategoriesContainer,
+    SubCategoriesCardContainer,
+} from "./style";
 
-import { NavbarCategoryContainer, NavbarCategorySelectorContainer, NavbarSubCategoriesContainer, SubCategoriesCardContainer } from "./style";
 import { Label } from "../../../../../shared/components/Label";
 
+import { NavbarSubCategoryCard } from "./NavbarSubCategoryCard";
+import { CurrencySelector } from "./CurrencySelector";
+
 interface Props {
-    item: {
-        categoryGraphics: JSX.Element;
-        payWithBanner: boolean;
-        labelText: string;
-        subCategoriesColumnSize: number;
-        subCategories: Array<{
-            iconGraphics: JSX.Element;
-            newLabel: boolean;
-            name: string;
-            description: string;
-        }>;
-    };
+    categoryGraphics: JSX.Element;
+    payWithBanner: boolean;
+    labelText: string;
+    subCategoriesColumnSize: number;
+    subCategories: Array<{
+        iconGraphics: JSX.Element;
+        newLabel: boolean;
+        name: string;
+        description: string;
+    }>;
 }
 
-export const NavbarCategory: React.FC<Props> = ({ item }) => {
-    const { categoryGraphics, payWithBanner, labelText, subCategoriesColumnSize, subCategories } = item;
-
+export const NavbarCategory: React.FC<Props> = ({ categoryGraphics, payWithBanner, labelText, subCategoriesColumnSize, subCategories }) => {
     return (
         <NavbarCategoryContainer>
             <NavbarCategorySelectorContainer>
                 {categoryGraphics}
                 {labelText !== "" && <Label text={labelText} />}
-                {subCategories.length > 0 ? <FontAwesomeIcon className="category_arrow" icon={faCaretDown} /> : ""}
+                {subCategories.length > 0 && <FontAwesomeIcon className="category_arrow" icon={faCaretDown} />}
             </NavbarCategorySelectorContainer>
-            {subCategories.length > 0 ? (
+            {subCategories.length > 0 && (
                 <NavbarSubCategoriesContainer>
-                    {payWithBanner ? <CurrencySelector /> : <div className="empty_spacer"></div>}
+                    {payWithBanner ? <CurrencySelector /> : <EmptySpacer />}
                     <SubCategoriesCardContainer subCategoriesColumnSize={subCategoriesColumnSize}>
-                        {subCategories.map((subCategoriesData, index) => (
-                            <NavbarSubCategoryCard key={index} subCategoriesData={subCategoriesData} />
-                        ))}
+                        <SubCategoryCards subCategories={subCategories} />
                     </SubCategoriesCardContainer>
                 </NavbarSubCategoriesContainer>
-            ) : (
-                <></>
             )}
         </NavbarCategoryContainer>
+    );
+};
+
+interface SubCategoriesCardsProps {
+    subCategories: { iconGraphics: JSX.Element; newLabel: boolean; name: string; description: string }[];
+}
+
+const SubCategoryCards: React.FC<SubCategoriesCardsProps> = ({ subCategories }) => {
+    return (
+        <>
+            {subCategories.map((subCategoriesData, index) => (
+                <NavbarSubCategoryCard key={index} subCategoriesData={subCategoriesData} />
+            ))}
+        </>
     );
 };

@@ -6,6 +6,10 @@ export const ThemeSwitchContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &:hover {
+        cursor: pointer;
+    }
 `;
 
 export const LightModeIcon = styled(SunIcon)`

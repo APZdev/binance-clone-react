@@ -1,6 +1,6 @@
 import { DownloadLanguageCurrencyThemeSection } from "./DownloadLanguageCurrencyThemeSection";
 
-import { BinanceLogoContainer, BinanceNavLogoLink, DesktopNavbarContainer } from "./style";
+import { BinanceLogoContainer, BinanceNavLogoLink, DesktopNavbarContainer, EmptySpace } from "./style";
 import { useMediaQuery } from "@mui/material";
 import { MobileNavbarSwitch } from "./MobileNavbarSwitch";
 import { AuthenticationSection } from "./AuthenticationSection";
@@ -9,19 +9,19 @@ import { SvgIcon } from "../../../helpers/SVG/svgImport";
 import React from "react";
 
 export const DesktopNavbar: React.FC = () => {
-    const downloadLanguageCurrencyThemeSectionCollapsed: boolean = useMediaQuery("(min-width:1246px)");
-    const authenticationSectionCollapsed: boolean = useMediaQuery("(min-width:1055px)");
-    const categoriesSectionCollapsed: boolean = useMediaQuery("(min-width:872px)");
+    const downloadLanguageCurrencyThemeSectionCollapsed = useMediaQuery("(min-width:1246px)");
+    const authenticationSectionCollapsed = useMediaQuery("(min-width:1055px)");
+    const categoriesSectionCollapsed = useMediaQuery("(min-width:872px)");
 
     return (
         <DesktopNavbarContainer>
-            <BinanceNavLogoLink href="localhost:3000">
+            <BinanceNavLogoLink href="https://binance-clone-react.vercel.app/">
                 <BinanceLogoContainer>
                     <SvgIcon id="binance-logo" width={120}></SvgIcon>
                 </BinanceLogoContainer>
             </BinanceNavLogoLink>
             {categoriesSectionCollapsed && <CategoriesSection />}
-            <div className="empty_space"></div>
+            <EmptySpace />
             {authenticationSectionCollapsed && <AuthenticationSection />}
             {downloadLanguageCurrencyThemeSectionCollapsed && <DownloadLanguageCurrencyThemeSection />}
             {!downloadLanguageCurrencyThemeSectionCollapsed && <MobileNavbarSwitch />}

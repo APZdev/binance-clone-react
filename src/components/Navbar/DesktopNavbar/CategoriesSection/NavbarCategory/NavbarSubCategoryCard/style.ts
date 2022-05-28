@@ -33,29 +33,9 @@ export const CardContainer = styled.div`
 
     padding: 16px;
 
-    & .image_container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-width: 40px;
-        min-height: 40px;
-    }
-
-    & .image_container > svg {
-        margin: 0;
-    }
-
-    & .card_info_container {
-        margin: 0 16px;
-    }
-
-    & .name_new_label_container {
-        display: flex;
-        align-items: center;
-    }
-
     &:hover {
         background-color: ${(p) => p.theme.desktopNavbar.hover};
+        cursor: pointer;
     }
 
     &:hover ${RightArrowIcon} {
@@ -65,6 +45,25 @@ export const CardContainer = styled.div`
 
         transition: 0.1s linear;
     }
+`;
+
+export const ImageContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    min-height: 40px;
+
+    & > svg {
+        margin: 0;
+    }
+`;
+export const CardInfoContainer = styled.div`
+    margin: 0 16px;
+`;
+export const NameNewLabelContainer = styled.div`
+    display: flex;
+    align-items: center;
 `;
 
 export const CardName = styled.p`
